@@ -136,5 +136,9 @@ io.on('connection', (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("LivePolling backend is running 🚀");
+});
+
 const PORT = process.env.PORT || 3001;
 server.listen(PORT, () => console.log(`SERVER RUNNING ON PORT ${PORT}`));
